@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="490.0" prefWidth="592.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.Zyrian.javalab4.HelloController">
+    <children>
+
+        <!-- Верхний Pane, для хранения кнопок -->
+      <Pane prefHeight="82.0" prefWidth="572.0">
+         <children>
+             <Button fx:id="_addBtn" alignment="CENTER" layoutX="5.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onAction="#onAddBtnClicked" prefHeight="60.0" prefWidth="60.0" text="Add" />
+             <Button fx:id="_clearAllBtn" layoutX="77.0" layoutY="9.0" mnemonicParsing="false" onAction="#onClearAllBtnClicked" prefHeight="60.0" prefWidth="82.0" text="Clear all" />
+             <Button fx:id="_clearSelectedBtn" layoutX="167.0" layoutY="9.0" mnemonicParsing="false" onAction="#onClearSelectedBtnClicked" prefHeight="60.0" prefWidth="120.0" text="Clear Selected" />
+            <RadioButton fx:id="_oneRadioBtn" layoutX="298.0" layoutY="25.0" mnemonicParsing="false" onAction="#onOneBtnSelected" prefHeight="30.0" prefWidth="65.0" text="One" />
+            <RadioButton fx:id="_twoRadioBtn" layoutX="364.0" layoutY="25.0" mnemonicParsing="false" onAction="#onTwoBtnSelected" prefHeight="30.0" prefWidth="65.0" text="Two" />
+         </children>
+      </Pane>
+
+        <!-- Таблица в которую мы будем выводить наш pojo -->
+        <TableView fx:id="_tableView" layoutX="12.0" layoutY="62.0" prefHeight="324.0" prefWidth="600.0">
+            <columns>
+                <!-- Колонки таблицы -->
+                <TableColumn fx:id="_idColumn" prefWidth="80.0" text="№" />
+                <TableColumn fx:id="_textColumn" prefWidth="150.0" text="Text" />
+            </columns>
+        </TableView>
+
+        <!-- Нижний Pane, для хранения Labels -->
+      <Pane prefHeight="29.0" prefWidth="572.0">
+         <children>
+             <Label fx:id="_selectedLabel" layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="65.0" text="Selected:" />
+             <Label fx:id="_selectedRadioButtonsDisplayer" layoutX="72.0" layoutY="4.0" />
+         </children>
+      </Pane>
+
+    </children>
+
+   <padding>
+      <Insets left="10.0" right="10.0" top="1.0" />
+   </padding>
+
+</VBox>
